@@ -35,3 +35,11 @@ def test_intersect_4():
         ('55/03/2020', '07/03/2020'),
         ('07/03/2020', '10/03/2020')
     ) == None
+
+
+def test_intersect_5():
+    with pytest.raises(IndexError):
+        intersect(
+            ('05/03/2020', ),
+            ('07/03/2020', '10/03/2020')
+        )
