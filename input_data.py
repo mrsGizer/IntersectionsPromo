@@ -1,10 +1,10 @@
-promotion_periods_first_part = [
+PROMOTION_PERIOD_FIRST_PART = [
     ('6/7/2020', '8/7/2020'),
     ('10/7/2020', '15/7/2020'),
     ('19/9/2020', '23/9/2020')
 ]
 
-promotion_periods_second_part = [
+PROMOTION_PERIOD_SECOND_PART = [
     ('7/7/2020', '12/7/2020'),
     ('19/9/2020', '22/9/2020')
 ]

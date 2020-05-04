@@ -26,9 +26,30 @@ IntersectionsPromo - скрипт, который помогает найти п
 ```
 
 - Запустите скрипт командой `python main.py`
-- Решение так же реализовано с использованием `namedtuple` в файле `namedtuple.py`. Данный вариант может быть более удобен и читаем. Использования метода класса `_make` позволит создавать объекты сразу при выгрузке данных из базы.
+- Решение так же реализовано с использованием `namedtuple` в файле `namedtuple.py`. Данный вариант может быть более удобен и читаем. 
+Использования метода класса `_make` позволит создавать объекты сразу при выгрузке данных из базы (данный функционал не реализован)
 
-![пример использования _make](images_for_github/_make.png)
+```python
+import sqlite3
+from collections import namedtuple
+
+key = 'vlan'
+value = 10
+db_filename = 'dhcp_snooping.db'
+
+keys = ['mac', 'ip', 'vlan', 'interface', 'switch']
+DhcpSnoopRecord = namedtuple('DhcpSnoopRecord', keys)
+
+conn = sqlite3.connect(db_fikename)
+query = 'sekect {} from dhcp where {} = ?'.format(','.join(keys), key)
+
+for row in map(DhcpSnoopRecord._make, conn.execute(query, (valye,))):
+    print(row.mac, row.ip, row.interface, sep='\n')
+    print('-' * 40)
+
+```
+
+
 
 
 ## Цели проекта

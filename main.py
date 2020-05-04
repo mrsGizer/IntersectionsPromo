@@ -1,7 +1,7 @@
 import logging
 from datetime import datetime
-from input_data import promotion_periods_first_part
-from input_data import promotion_periods_second_part
+from input_data import PROMOTION_PERIOD_FIRST_PART
+from input_data import PROMOTION_PERIOD_SECOND_PART
 
 logging.basicConfig(filename='intersections.log', filemode='w')
 
@@ -42,7 +42,7 @@ def get_intersections(timelines1, timelines2):
 
 if __name__ == '__main__':
     print(get_intersections(
-        promotion_periods_first_part,
-        promotion_periods_second_part
+        PROMOTION_PERIOD_FIRST_PART,
+        PROMOTION_PERIOD_SECOND_PART
         )
     )
