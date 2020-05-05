@@ -4,6 +4,7 @@ from main import intersect
 
 
 def test_intersect_1():
+    "There should be no intersection"
     assert intersect(
         ('05/03/2020', '09/03/2020'),
         ('10/03/2020', '10/03/2020')
@@ -11,6 +12,7 @@ def test_intersect_1():
 
 
 def test_intersect_2():
+    "There should be intersection"
     assert intersect(
         ('05/03/2020', '09/03/2020'),
         ('07/03/2020', '10/03/2020')
@@ -21,6 +23,7 @@ def test_intersect_2():
 
 
 def test_intersect_3():
+    "There should be intersection"
     assert intersect(
         ('05/03/2020', '07/03/2020'),
         ('07/03/2020', '10/03/2020')
@@ -31,6 +34,7 @@ def test_intersect_3():
 
 
 def test_intersect_4():
+    "There should be no intersection"
     assert intersect(
         ('55/03/2020', '07/03/2020'),
         ('07/03/2020', '10/03/2020')
@@ -38,6 +42,7 @@ def test_intersect_4():
 
 
 def test_intersect_5():
+    "There should be IndexError"
     with pytest.raises(IndexError):
         intersect(
             ('05/03/2020', ),

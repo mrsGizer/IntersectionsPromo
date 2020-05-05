@@ -2,8 +2,8 @@ import logging
 from collections import namedtuple
 from datetime import datetime
 from functools import reduce
-from input_data import promotion_periods_first_part
-from input_data import promotion_periods_second_part
+from input_data import PROMOTION_PERIOD_FIRST_PART
+from input_data import PROMOTION_PERIOD_SECOND_PART
 
 logging.basicConfig(filename='intersections.log', filemode='w')
 
@@ -61,11 +61,11 @@ def get_intersections(timelines):
 
 if __name__ == '__main__':
     first_part = creat_timelines_for_check(
-        promotion_periods_first_part,
+        PROMOTION_PERIOD_FIRST_PART,
         timelines_for_check
     )
     second_part = creat_timelines_for_check(
-        promotion_periods_second_part,
+        PROMOTION_PERIOD_SECOND_PART,
         timelines_for_check
     )
     print(get_intersections(second_part))

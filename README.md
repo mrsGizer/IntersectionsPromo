@@ -49,7 +49,7 @@ for row in map(DhcpSnoopRecord._make, conn.execute(query, (valye,))):
 
 ```
 
-
+- Для запуска тестов используйте команду `pytest`
 
 
 ## Цели проекта
